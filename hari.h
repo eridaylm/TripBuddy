@@ -3,7 +3,7 @@
 
 #include "Destinasi.h"
 
-    struct NodeHari
+struct NodeHari
 {
     int noHari;
     NodeDestinasi *headDestinasi; // Menunjuk ke head DLL destinasi hari ini
