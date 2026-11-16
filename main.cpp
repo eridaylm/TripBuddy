@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include "Itinerary.h"
 
 using namespace std;
 
@@ -205,6 +206,38 @@ void tampilkanMenu() {
 int main() {
     ListItinerary tripBuddy;
     int pilihan;
+
+    cout << "=== INISIALISASI HARI PERJALANAN ===\n";
+    tripBuddy.tambahHari(); // Hari 1
+    tripBuddy.tambahHari(); // Hari 2
+    cout << "\n";
+
+    cout << "=== MENAMBAHKAN DESTINASI ===\n";
+    NodeHari *hari1 = tripBuddy.cariHari(1);
+    if (hari1 != nullptr)
+    {
+        hari1->tambahDestinasi("Candi Borobudur");
+        hari1->tambahDestinasi("Museum Ullen Sentalu");
+        hari1->tambahDestinasi("Jalan Malioboro");
+    }
+
+    NodeHari *hari2 = tripBuddy.cariHari(2);
+    if (hari2 != nullptr)
+    {
+        hari2->tambahDestinasi("Keraton Yogyakarta");
+        hari2->tambahDestinasi("Taman Sari");
+        hari2->tambahDestinasi("Pantai Parangtritis");
+    }
+
+    tripBuddy.tampilkanSemuaItinerary();
+
+    cout << "\n=== MENGHAPUS DESTINASI ===\n";
+    if (hari1 != nullptr)
+    {
+        hari1->hapusDestinasi("Museum Ullen Sentalu");
+    }
+
+    tripBuddy.tampilkanSemuaItinerary();
 
     do {
         tampilkanMenu();
