@@ -2,9 +2,7 @@
 
 int main()
 {
-    // ==========================================
-    // BAGIAN 1 (Anak 1): Inisialisasi & Tambah Hari
-    // ==========================================
+    //Inisialisasi & Tambah Hari
     ListItinerary tripBuddy;
 
     cout << "=== INISIALISASI HARI PERJALANAN ===\n";
@@ -12,9 +10,7 @@ int main()
     tripBuddy.tambahHari(); // Hari 2
     cout << "\n";
 
-    // ==========================================
-    // BAGIAN 2 (Anak 2): Cari Hari & Isi Destinasi Hari 1
-    // ==========================================
+    //Cari Hari & Isi Destinasi Hari 1
     cout << "=== MENAMBAHKAN DESTINASI ===\n";
     NodeHari *hari1 = tripBuddy.cariHari(1);
     if (hari1 != nullptr)
@@ -24,9 +20,7 @@ int main()
         hari1->tambahDestinasi("Jalan Malioboro");
     }
 
-    // ==========================================
-    // BAGIAN 3 (Anak 3): Isi Destinasi Hari 2 & Tampilkan Semua
-    // ==========================================
+    //Isi Destinasi Hari 2 & Tampilkan Semua
     NodeHari *hari2 = tripBuddy.cariHari(2);
     if (hari2 != nullptr)
     {
@@ -37,9 +31,7 @@ int main()
 
     tripBuddy.tampilkanSemuaItinerary();
 
-    // ==========================================
-    // BAGIAN 4 (Anak 4): Hapus Destinasi & Tampilkan Hasil Akhir
-    // ==========================================
+    //Hapus Destinasi & Tampilkan Hasil Akhir
     cout << "\n=== MENGHAPUS DESTINASI ===\n";
     if (hari1 != nullptr)
     {
